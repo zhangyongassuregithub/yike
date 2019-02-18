@@ -5,12 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="referrer" content="never">
 	<title>豆瓣一刻</title>
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="public/less/main.css">
-	<script src="bower_components/angular/angular.js"></script>
-	<script src="bower_components/angular-route/angular-route.js"></script>
-	<script src="scripts/app.js"></script>
-	<script src="scripts/controllers.js"></script>
+
 </head>
 <body ng-app="Yike">
 	<div class="viewport">
@@ -19,7 +16,7 @@
 			<dl>
 				<dt class="login">
 					<div class="avatar">
-						<img src="/images/avatar.png" alt="">
+						<img src="./public/images/avatar.png" alt="">
 					</div>
 					<span>登录</span>
 				</dt>
@@ -43,10 +40,14 @@
 			</div>
 			<!-- 主体 -->
 			<div ng-class="{body:true, collapse: collapsed}">
-				<img class="loading" ng-hide="loaded" src="/images/loading.gif" alt="">
+				<img class="loading" ng-hide="loaded" src="./public/images/loading.gif" alt="">
 				<div ng-view></div>
 			</div>
 		</div>
 	</div>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="scripts/app.js"></script>
+	<script src="scripts/controllers.js"></script>
 </body>
 </html>
