@@ -47,7 +47,6 @@ angular.module('Controllers', [])
 		$rootScope.loaded = true;
 		$scope.posts = info.data.posts;
 		$scope.date = info.data.date;
-
 	});
 }])
 
@@ -60,12 +59,12 @@ angular.module('Controllers', [])
 	$rootScope.loaded = false;
 
 	$http({
-		url: '/proxy/author',
-		method: 'post'
+		url: './api/author.php',
+		method: 'get'
 	}).then(function (info) {
 		$rootScope.loaded = true;
-		$scope.rec = info.rec;
-		$scope.all = info.all;
+		$scope.all=info.data.all;
+		$scope.rec=info.data.rec;
 	});
 }])
 
